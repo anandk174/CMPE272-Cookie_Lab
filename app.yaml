@@ -1,0 +1,62 @@
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /
+  script: index.html
+
+- url: /css
+  static_dir: css
+
+- url: /img
+  static_dir: img
+
+- url: /scss
+  static_dir: scss
+
+- url: /vendor/bootstrap/css
+  static_dir: vendor/bootstrap/css
+
+- url: /vendor/jquery
+  static_dir: vendor/jquery
+
+- url: /vendor/bootstrap/js
+  static_dir: vendor/bootstrap/js
+
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /index\.html
+  script: index.html
+
+- url: /about.html
+  script: about.html
+
+- url: /products.php
+  script: products.php
+
+- url: /storeone.php
+  script: storeone.php
+
+- url: /secure.php
+  script: secure.php
+
+- url: /vegies.php
+  script: vegies.php
+
+- url: /meats.php
+  script: meats.php
+
+- url: /dairy.php
+  script: dairy.php
+
+- url: /(.*\.(gif|png|jpg|css|js))$
+  static_files: static/\1
+  upload: static/.*\.(gif|png|jpg|css|js)$
+
+# - url: /(.*)
+#   script: index.html
+  # upload: www/(.*)
+  
